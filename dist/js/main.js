@@ -26,7 +26,6 @@ var apod = {
 
     buildDOM: function(result){
             $('#apodTitle').text(result.title);
-
             if(result.media_type ==='video'){
                 $('#apodImg').hide();
                 $('#apodVideo > iframe').attr('src', result.url).show();
@@ -42,7 +41,7 @@ var apod = {
             $('#apodDesc').text(result.explanation);
     },
 
-    getRrequest: function(){
+    getRequest: function(){
         var date = this.randomDate(new Date(1995, 5, 16), new Date());
         var that = this;
         var nasaKey = 'maxqw9xwNbXzmjgybhKjwwxAU6mL1OyquhSSZF6q';
@@ -60,7 +59,7 @@ var apod = {
     },
 
     init: function() {
-        this.getRrequest();
+        this.getRequest();
     }
 };
 
